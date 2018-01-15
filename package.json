@@ -1,0 +1,54 @@
+{
+  "name": "react-starter-kit",
+  "version": "2.0.0",
+  "description": "A Simple React Starter Kit w/ eslint, webpack, jest, babel, react",
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --watch",
+    "build": "webpack && cp ./index.html ./build/index.html",
+    "test": "jest",
+    "eslint": "./node_modules/.bin/eslint ./lib/*.js, ./lib/*.jsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goodalls/react-starter-kit.git"
+  },
+  "author": "Jeff Goodall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goodalls/react-starter-kit/issues"
+  },
+  "homepage": "https://github.com/goodalls/react-starter-kit#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-jest": "^22.0.6",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.8",
+    "eslint": "^4.15.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest-css-modules": "^1.1.0",
+    "node-sass": "^4.7.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  },
+  "dependencies": {},
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/jest-css-modules"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "identity-obj-proxy"
+    }
+  }
+}
