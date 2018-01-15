@@ -1,1 +1,1 @@
-# react-starter-kit
+# Idea Box in React
